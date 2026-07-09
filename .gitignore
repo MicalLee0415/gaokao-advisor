@@ -1,0 +1,32 @@
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.eggs/
+*.so
+
+# 临时文件
+*.json.bak
+temp_*.html
+temp_*.pdf
+*_test.json
+*_test.html
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 用户数据（敏感）
+student.json
+analysis.json
+data_*.json
