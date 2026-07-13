@@ -54,7 +54,7 @@
 | `references/methodology.md` | 分析方法论（6步框架详解） |
 | `references/major-database.md` | 专业方向库（就业/课程/门槛/企业） |
 | `references/report-style.md` | 报告视觉规范 |
-| `references/policy-templates/` | 各省高考政策模板 |
+| `references/policy-templates/` | 全国31省高考政策模板 |
 | `templates/report_template.html` | PDF报告HTML模板（浏览器可预览） |
 | `templates/survey_form.html` | 网页调研表单（填写后下载student.json） |
 | `workflows/full-analysis.md` | 完整分析流程 |

@@ -61,7 +61,9 @@ gaokao-advisor/
 │   ├── major-database.md           # 专业方向库（就业/课程/门槛/企业）
 │   ├── report-style.md             # 报告视觉规范
 │   └── policy-templates/
-│       └── hebei.md                # 河北省高考政策
+│       ├── hebei.md                # 河北省（3+1+2）
+│       ├── 北京.md ... 西藏.md      # 全国31省政策模板（P3）
+│       └── ...                     # 含3+3/3+1+2/传统高考三种模式
 ├── templates/
 │   ├── survey_form.html            # 网页调研表单（填写后下载student.json）
 │   └── report_template.html        # 交互式报告查看器（加载analysis.json动态渲染）
@@ -114,7 +116,7 @@ playwright install chromium
 | P0 | 核心Skill（调研+分析+PDF） | ✅ 完成 |
 | P1 | 数据爬虫（4省）+ 内置数据包 | 📋 计划中 |
 | P2 | 网页表单 + Excel输出 + 交互式网页 | ✅ 完成 |
-| P3 | 全国31省 + 政策模板扩展 | 📋 计划中 |
+| P3 | 全国31省 + 政策模板扩展 | ✅ 完成 |
 
 ## License
 
