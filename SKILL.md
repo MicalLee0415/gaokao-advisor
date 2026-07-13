@@ -14,8 +14,8 @@
 ### 完整分析流程（full-analysis）
 
 1. **考生调研**：通过30+问题收集考生信息（学科/性格/家庭/就业/健康）
-   - 对话问答模式：逐个提问
-   - 网页表单模式：生成HTML让用户填写
+   - 对话问答模式：逐个提问 → `scripts/survey.py`
+   - 网页表单模式：浏览器填写 → `templates/survey_form.html`（提交后下载student.json）
    - 输出：student.json
 
 2. **数据获取**：加载目标省份的投档数据
@@ -29,7 +29,9 @@
    - 输出：analysis.json
 
 4. **报告生成**：生成PDF/Excel/网页
-   - PDF：智库风格（等线字体/深海蓝/莫兰迪色系）
+   - PDF：智库风格（等线字体/深海蓝/莫兰迪色系）→ `scripts/pdf_generator.py`
+   - Excel：3个Sheet（志愿清单/学生画像/风险评估）→ `scripts/excel_generator.py`
+   - 网页预览：`templates/report_template.html`（浏览器直接打开）
    - 参考：references/report-style.md
    - 输出：交付到桌面
 
@@ -47,13 +49,14 @@
 |---|---|
 | `scripts/survey.py` | 考生调研（30+问题收集） |
 | `scripts/analyzer.py` | 核心分析引擎（6步框架） |
-| `scripts/pdf_generator.py` | PDF报告生成 |
+| `scripts/pdf_generator.py` | PDF报告生成（Playwright） |
+| `scripts/excel_generator.py` | Excel志愿表生成（openpyxl，3个Sheet） |
 | `references/methodology.md` | 分析方法论（6步框架详解） |
 | `references/major-database.md` | 专业方向库（就业/课程/门槛/企业） |
 | `references/report-style.md` | 报告视觉规范 |
 | `references/policy-templates/` | 各省高考政策模板 |
-| `templates/report_template.html` | PDF报告HTML模板 |
-| `templates/survey_form.html` | 网页调研表单模板 |
+| `templates/report_template.html` | PDF报告HTML模板（浏览器可预览） |
+| `templates/survey_form.html` | 网页调研表单（填写后下载student.json） |
 | `workflows/full-analysis.md` | 完整分析流程 |
 
 ## 注意事项

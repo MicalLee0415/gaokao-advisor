@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>高考志愿填报调研表</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: "DengXian","等线","Microsoft YaHei",sans-serif; background: #F5F7FA; color: #1a1a1a; line-height: 1.6; }
+.container { max-width: 720px; margin: 0 auto; padding: 20px; }
+h1 { font-size: 24px; color: #1E3A5F; text-align: center; margin-bottom: 8px; }
+.subtitle { text-align: center; color: #888; font-size: 13px; margin-bottom: 24px; }
+.section { background: #fff; border-radius: 8px; padding: 24px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+.section-title { font-size: 16px; color: #1E3A5F; font-weight: 700; border-left: 4px solid #1E3A5F; padding-left: 12px; margin-bottom: 16px; }
+.field { margin-bottom: 14px; }
+.field label { display: block; font-size: 14px; color: #333; margin-bottom: 4px; }
+.field label .req { color: #dc2626; }
+.field input[type="text"], .field input[type="number"], .field select {
+  width: 100%; padding: 8px 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 14px; font-family: inherit;
+}
+.field input:focus, .field select:focus { border-color: #1E3A5F; outline: none; }
+.field .hint { font-size: 12px; color: #999; margin-top: 2px; }
+.radio-group { display: flex; flex-wrap: wrap; gap: 8px; }
+.radio-group label { display: inline-flex; align-items: center; padding: 6px 14px; border: 1px solid #ddd; border-radius: 20px; cursor: pointer; font-size: 13px; transition: all 0.15s; }
+.radio-group label:hover { border-color: #1E3A5F; }
+.radio-group input { display: none; }
+.radio-group input:checked + span { color: #fff; }
+.radio-group label:has(input:checked) { background: #1E3A5F; border-color: #1E3A5F; color: #fff; }
+.submit-btn { display: block; width: 100%; padding: 14px; background: #1E3A5F; color: #fff; border: none; border-radius: 8px; font-size: 16px; font-weight: 700; cursor: pointer; font-family: inherit; }
+.submit-btn:hover { background: #0D2137; }
+.result { display: none; margin-top: 16px; padding: 16px; background: #e8f5e0; border-radius: 8px; border: 1px solid #6B9B3A; }
+.result pre { white-space: pre-wrap; word-break: break-all; font-size: 12px; max-height: 300px; overflow-y: auto; }
+.download-btn { display: inline-block; margin-top: 8px; padding: 8px 20px; background: #2D4A3E; color: #fff; text-decoration: none; border-radius: 4px; font-size: 14px; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>高考志愿填报调研表</h1>
+<p class="subtitle">共30+问题，约5分钟完成。提交后生成student.json供分析引擎使用。</p>
+
+<form id="surveyForm">
+
+<!-- 基本信息 -->
+<div class="section">
+<div class="section-title">基本信息</div>
+<div class="field"><label>考生姓名 <span class="req">*</span></label><input type="text" name="name" required></div>
+<div class="field"><label>性别 <span class="req">*</span></label>
+  <div class="radio-group">
+    <label><input type="radio" name="gender" value="男"><span>男</span></label>
+    <label><input type="radio" name="gender" value="女"><span>女</span></label>
+  </div>
+</div>
+<div class="field"><label>所在省份 <span class="req">*</span></label>
+  <select name="province" required>
+    <option value="">请选择</option>
+    <option>河北</option><option>山东</option><option>江苏</option><option>浙江</option>
+    <option>湖南</option><option>湖北</option><option>广东</option><option>福建</option>
+    <option>重庆</option><option>辽宁</option><option>安徽</option><option>江西</option>
+    <option>河南</option><option>四川</option><option>云南</option><option>贵州</option>
+    <option>陕西</option><option>山西</option><option>黑龙江</option><option>吉林</option>
+    <option>甘肃</option><option>广西</option><option>海南</option><option>内蒙古</option>
+    <option>新疆</option><option>西藏</option><option>青海</option><option>宁夏</option>
+    <option>北京</option><option>天津</option><option>上海</option>
+  </select>
+</div>
+<div class="field"><label>高考总分 <span class="req">*</span></label><input type="number" name="score" required></div>
+<div class="field"><label>全省位次（排名）<span class="req">*</span></label><input type="number" name="rank" required></div>
+<div class="field"><label>选科组合 <span class="req">*</span></label><input type="text" name="subjects" placeholder="如：物理+化学+生物" required></div>
+</div>
+
+<!-- 学科能力 -->
+<div class="section">
+<div class="section-title">学科能力</div>
+<div class="field"><label>语文 <span class="req">*</span></label><input type="number" name="score_chinese" required></div>
+<div class="field"><label>数学 <span class="req">*</span></label><input type="number" name="score_math" required></div>
+<div class="field"><label>英语 <span class="req">*</span></label><input type="number" name="score_english" required></div>
+<div class="field"><label>物理（如选物理）</label><input type="number" name="score_physics"></div>
+<div class="field"><label>化学（如选化学）</label><input type="number" name="score_chemistry"></div>
+<div class="field"><label>生物（如选生物）</label><input type="number" name="score_biology"></div>
+</div>
+
+<!-- 性格职业倾向 -->
+<div class="section">
+<div class="section-title">性格职业倾向</div>
+<div class="field"><label>课间休息时你更喜欢？<span class="req">*</span></label>
+  <div class="radio-group">
+    <label><input type="radio" name="mbti_energy" value="和同学聊天(E)"><span>和同学聊天</span></label>
+    <label><input type="radio" name="mbti_energy" value="自己看书/思考(I)"><span>自己看书/思考</span></label>
+  </div>
+</div>
+<div class="field"><label>你更感兴趣的是？<span class="req">*</span></label>
+  <div class="radio-group">
+    <label><input type="radio" name="mbti_info" value="具体事实和细节(S)"><span>具体事实和细节</span></label>
+    <label><input type="radio" name="mbti_info" value="可能性和想法(N)"><span>可能性和想法</span></label>
+  </div>
+</div>
+<div class="field"><label>做决定时你更看重？<span class="req">*</span></label>
+  <div class="radio-group">
+    <label><input type="radio" name="mbti_decision" value="逻辑和分析(T)"><span>逻辑和分析</span></label>
+    <label><input type="radio" name="mbti_decision" value="情感和人际关系(F)"><span>情感和人际关系</span></label>
+  </div>
+</div>
+<div class="field"><label>你更喜欢？<span class="req">*</span></label>
+  <div class="radio-group">
+    <label><input type="radio" name="mbti_lifestyle" value="提前计划按部就班(J)"><span>提前计划按部就班</span></label>
+    <label><input type="radio" name="mbti_lifestyle" value="灵活应变保持开放(P)"><span>灵活应变保持开放</span></label>
+  </div>
+</div>
+<div class="field"><label>以下活动你最喜欢哪个？<span class="req">*</span></label>
+  <div class="radio-group">
+    <label><input type="radio" name="holland_activity" value="做实验/研究(R)"><span>做实验/研究</span></label>
+    <label><input type="radio" name="holland_activity" value="设计/创作(A)"><span>设计/创作</span></label>
+    <label><input type="radio" name="holland_activity" value="组织/管理(E)"><span>组织/管理</span></label>
+    <label><input type="radio" name="holland_activity" value="帮助/服务(S)"><span>帮助/服务</span></label>
+  </div>
+</div>
+<div class="field"><label>你喜欢的工作环境是？<span class="req">*</span></label>
+  <div class="radio-group">
+    <label><input type="radio" name="holland_env" value="实验室/研究所(I)"><span>实验室/研究所</span></label>
+    <label><input type="radio" name="holland_env" value="户外/动手操作(R)"><span>户外/动手操作</span></label>
+    <label><input type="radio" name="holland_env" value="办公室/数据分析(C)"><span>办公室/数据分析</span></label>
+    <label><input type="radio" name="holland_env" value="与人打交道(S)"><span>与人打交道</span></label>
+  </div>
+</div>
+</div>
+
+<!-- 家庭环境 -->
+<div class="section">
+<div class="section-title">家庭环境</div>
+<div class="field"><label>家庭年收入大约？<span class="req">*</span></label>
+  <div class="radio-group">
+    <label><input type="radio" name="family_income" value="10万以下"><span>10万以下</span></label>
+    <label><input type="radio" name="family_income" value="10-20万"><span>10-20万</span></label>
+    <label><input type="radio" name="family_income" value="20-50万"><span>20-50万</span></label>
+    <label><input type="radio" name="family_income" value="50万以上"><span>50万以上</span></label>
+  </div>
+</div>
+<div class="field"><label>父母最高学历？<span class="req">*</span></label>
+  <div class="radio-group">
+    <label><input type="radio" name="parent_education" value="初中及以下"><span>初中及以下</span></label>
+    <label><input type="radio" name="parent_education" value="高中/中专"><span>高中/中专</span></label>
+    <label><input type="radio" name="parent_education" value="大专/本科"><span>大专/本科</span></label>
+    <label><input type="radio" name="parent_education" value="硕士及以上"><span>硕士及以上</span></label>
+  </div>
+</div>
+<div class="field"><label>是否家族第一代大学生？<span class="req">*</span></label>
+  <div class="radio-group">
+    <label><input type="radio" name="first_gen" value="是"><span>是</span></label>
+    <label><input type="radio" name="first_gen" value="否"><span>否</span></label>
+  </div>
+</div>
+<div class="field"><label>地域偏好（可多选，用逗号分隔）<span class="req">*</span></label><input type="text" name="location_pref" placeholder="如：天津,济南,杭州" required></div>
+<div class="field"><label>学费预算上限（每年）<span class="req">*</span></label>
+  <div class="radio-group">
+    <label><input type="radio" name="tuition_budget" value="5000元以内"><span>5000元以内</span></label>
+    <label><input type="radio" name="tuition_budget" value="5000-8000元"><span>5000-8000元</span></label>
+    <label><input type="radio" name="tuition_budget" value="8000-15000元"><span>8000-15000元</span></label>
+    <label><input type="radio" name="tuition_budget" value="15000-30000元"><span>15000-30000元</span></label>
+    <label><input type="radio" name="tuition_budget" value="不限"><span>不限</span></label>
+  </div>
+</div>
+</div>
+
+<!-- 就业意向 -->
+<div class="section">
+<div class="section-title">就业意向</div>
+<div class="field"><label>本科毕业后打算？<span class="req">*</span></label>
+  <div class="radio-group">
+    <label><input type="radio" name="grad_plan" value="一定要考研"><span>一定要考研</span></label>
+    <label><input type="radio" name="grad_plan" value="可能考研"><span>可能考研</span></label>
+    <label><input type="radio" name="grad_plan" value="直接就业"><span>直接就业</span></label>
+    <label><input type="radio" name="grad_plan" value="考公务员"><span>考公务员</span></label>
+    <label><input type="radio" name="grad_plan" value="还没想好"><span>还没想好</span></label>
+  </div>
+</div>
+<div class="field"><label>最想去的单位类型？<span class="req">*</span></label>
+  <div class="radio-group">
+    <label><input type="radio" name="company_type" value="国企/央企"><span>国企/央企</span></label>
+    <label><input type="radio" name="company_type" value="民营/互联网"><span>民营/互联网</span></label>
+    <label><input type="radio" name="company_type" value="外企"><span>外企</span></label>
+    <label><input type="radio" name="company_type" value="公务员/事业编"><span>公务员/事业编</span></label>
+    <label><input type="radio" name="company_type" value="自己创业"><span>自己创业</span></label>
+  </div>
+</div>
+<div class="field"><label>感兴趣的行业（可多选）</label><input type="text" name="industry_pref" placeholder="如：化工,新能源,医药,计算机"></div>
+<div class="field"><label>毕业后5年期望年薪？<span class="req">*</span></label>
+  <div class="radio-group">
+    <label><input type="radio" name="salary_expect" value="10万以下"><span>10万以下</span></label>
+    <label><input type="radio" name="salary_expect" value="10-20万"><span>10-20万</span></label>
+    <label><input type="radio" name="salary_expect" value="20-30万"><span>20-30万</span></label>
+    <label><input type="radio" name="salary_expect" value="30-50万"><span>30-50万</span></label>
+    <label><input type="radio" name="salary_expect" value="50万以上"><span>50万以上</span></label>
+  </div>
+</div>
+<div class="field"><label>明确不想学的专业方向（可多选）</label><input type="text" name="exclusions" placeholder="如：师范,中外合作,环境工程,土木"></div>
+</div>
+
+<!-- 健康与限制 -->
+<div class="section">
+<div class="section-title">健康与限制</div>
+<div class="field"><label>色觉情况（非常重要，影响退档）<span class="req">*</span></label>
+  <div class="radio-group">
+    <label><input type="radio" name="color_vision" value="正常"><span>正常</span></label>
+    <label><input type="radio" name="color_vision" value="色弱"><span>色弱</span></label>
+    <label><input type="radio" name="color_vision" value="色盲"><span>色盲</span></label>
+    <label><input type="radio" name="color_vision" value="不确定/未检查"><span>不确定/未检查</span></label>
+  </div>
+</div>
+<div class="field"><label>裸眼视力（左右眼平均）<span class="req">*</span></label>
+  <div class="radio-group">
+    <label><input type="radio" name="vision" value="5.0以上"><span>5.0以上</span></label>
+    <label><input type="radio" name="vision" value="4.8-5.0"><span>4.8-5.0</span></label>
+    <label><input type="radio" name="vision" value="4.5-4.8"><span>4.5-4.8</span></label>
+    <label><input type="radio" name="vision" value="4.5以下"><span>4.5以下</span></label>
+  </div>
+</div>
+<div class="field"><label>身高（cm）</label><input type="number" name="height"></div>
+<div class="field"><label>是否有其他体检异常？（如无则留空）</label><input type="text" name="other_health" placeholder="如：无"></div>
+</div>
+
+<button type="submit" class="submit-btn">生成 student.json</button>
+</form>
+
+<div class="result" id="result">
+  <h3 style="color:#2D4A3E;margin-bottom:8px;">student.json 已生成</h3>
+  <pre id="jsonOutput"></pre>
+  <a href="#" id="downloadLink" class="download-btn">下载 student.json</a>
+</div>
+
+</div>
+
+<script>
+document.getElementById('surveyForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var formData = new FormData(this);
+  var answers = {};
+  formData.forEach(function(val, key) { answers[key] = val; });
+
+  // MBTI
+  var mbti = '';
+  var mbtiMap = {'mbti_energy':'E','mbti_info':'N','mbti_decision':'T','mbti_lifestyle':'J'};
+  Object.keys(mbtiMap).forEach(function(key) {
+    var val = answers[key] || '';
+    if (val && val.length > 1) mbti += val[val.length-2];
+    else mbti += mbtiMap[key];
+  });
+
+  // Holland
+  var holland = '';
+  ['holland_activity','holland_env'].forEach(function(key) {
+    var val = answers[key] || '';
+    var m = val.match(/\(([A-Z])\)/);
+    if (m) holland += m[1];
+  });
+
+  // Scores
+  var scores = {};
+  [['score_chinese','语文'],['score_math','数学'],['score_english','英语'],
+   ['score_physics','物理'],['score_chemistry','化学'],['score_biology','生物']].forEach(function(pair) {
+    var val = answers[pair[0]];
+    if (val !== undefined && val !== '') scores[pair[1]] = parseFloat(val);
+  });
+
+  // Exclusions
+  var exclusions = [];
+  if (answers['exclusions']) {
+    answers['exclusions'].replace(/，/g,',').split(',').forEach(function(e) {
+      if (e.trim()) exclusions.push(e.trim());
+    });
+  }
+
+  // Location
+  var locPref = [];
+  if (answers['location_pref']) {
+    answers['location_pref'].replace(/，/g,',').split(',').forEach(function(l) {
+      if (l.trim()) locPref.push(l.trim());
+    });
+  }
+
+  // Raw personality answers (matches survey.py organize_answers)
+  var rawPersonality = {};
+  Object.keys(answers).forEach(function(k) {
+    if (k.indexOf('mbti_') === 0 || k.indexOf('holland_') === 0) rawPersonality[k] = answers[k];
+  });
+
+  var profile = {
+    basic: {
+      name: answers['name']||'', gender: answers['gender']||'',
+      province: answers['province']||'',
+      score: parseInt(answers['score'])||0,
+      rank: parseInt(answers['rank'])||0,
+      subjects: answers['subjects']||''
+    },
+    academic: { scores: scores },
+    personality: { mbti: mbti, holland_code: holland, raw: rawPersonality },
+    family: {
+      income: answers['family_income']||'', parent_education: answers['parent_education']||'',
+      first_gen: answers['first_gen']||'', location_preference: locPref,
+      tuition_budget: answers['tuition_budget']||''
+    },
+    career: {
+      grad_plan: answers['grad_plan']||'', company_type: answers['company_type']||'',
+      industry_preference: answers['industry_pref']||'',
+      salary_expectation: answers['salary_expect']||'', exclusions: exclusions
+    },
+    health: {
+      color_vision: answers['color_vision']||'', vision: answers['vision']||'',
+      height: answers['height']||'', other: answers['other_health']||''
+    }
+  };
+
+  var json = JSON.stringify(profile, null, 2);
+  document.getElementById('jsonOutput').textContent = json;
+  document.getElementById('result').style.display = 'block';
+
+  var blob = new Blob([json], {type: 'application/json'});
+  var url = URL.createObjectURL(blob);
+  var dl = document.getElementById('downloadLink');
+  dl.href = url;
+  dl.download = 'student.json';
+
+  document.getElementById('result').scrollIntoView({behavior:'smooth'});
+});
+</script>
+</body>
+</html>

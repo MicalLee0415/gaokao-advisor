@@ -30,11 +30,20 @@ cp -r gaokao-advisor ~/.config/opencode/skills/
 # 1. 考生调研（对话问答）
 python scripts/survey.py
 
+# 或：网页表单填写
+# 浏览器打开 templates/survey_form.html
+
 # 2. 分析引擎
 python scripts/analyzer.py
 
-# 3. 生成PDF
+# 3. 生成PDF报告
 python scripts/pdf_generator.py analysis.json report.pdf
+
+# 4. 生成Excel志愿表
+python scripts/excel_generator.py analysis.json report.xlsx
+
+# 或：浏览器预览报告模板
+# 打开 templates/report_template.html
 ```
 
 ## 目录结构
@@ -45,14 +54,17 @@ gaokao-advisor/
 ├── scripts/
 │   ├── survey.py                   # 30+问题调研 → student.json
 │   ├── analyzer.py                 # 6步分析引擎 → analysis.json
-│   └── pdf_generator.py            # PDF报告生成（Playwright）
+│   ├── pdf_generator.py            # PDF报告生成（Playwright）
+│   └── excel_generator.py          # Excel志愿表生成（openpyxl，3个Sheet）
 ├── references/
 │   ├── methodology.md              # 分析方法论（6步框架）
 │   ├── major-database.md           # 专业方向库（就业/课程/门槛/企业）
 │   ├── report-style.md             # 报告视觉规范
 │   └── policy-templates/
 │       └── hebei.md                # 河北省高考政策
-├── templates/                      # 报告模板（P2）
+├── templates/
+│   ├── survey_form.html            # 网页调研表单（填写后下载student.json）
+│   └── report_template.html        # 交互式报告查看器（加载analysis.json动态渲染）
 └── workflows/
     └── full-analysis.md            # 完整分析流程
 ```
@@ -101,7 +113,7 @@ playwright install chromium
 |---|---|---|
 | P0 | 核心Skill（调研+分析+PDF） | ✅ 完成 |
 | P1 | 数据爬虫（4省）+ 内置数据包 | 📋 计划中 |
-| P2 | 网页表单 + Excel输出 + 交互式网页 | 📋 计划中 |
+| P2 | 网页表单 + Excel输出 + 交互式网页 | ✅ 完成 |
 | P3 | 全国31省 + 政策模板扩展 | 📋 计划中 |
 
 ## License

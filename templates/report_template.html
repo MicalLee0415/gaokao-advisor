@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>高考志愿报告查看器</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:"DengXian","等线","Microsoft YaHei",sans-serif; font-size:14px; line-height:1.6; color:#1a1a1a; background:#F5F7FA; }
+.toolbar { background:#1E3A5F; padding:16px 24px; color:#fff; display:flex; align-items:center; gap:16px; position:sticky; top:0; z-index:100; }
+.toolbar h1 { font-size:18px; font-weight:700; }
+.toolbar .file-btn { background:#6E2C2C; color:#fff; border:none; padding:8px 20px; border-radius:4px; cursor:pointer; font-size:13px; font-family:inherit; }
+.toolbar .file-btn:hover { background:#8B3838; }
+.toolbar .file-name { font-size:12px; color:#aaa; }
+.report { max-width:800px; margin:24px auto; background:#fff; padding:40px; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08); }
+.empty-state { text-align:center; padding:80px 20px; color:#999; }
+.empty-state h2 { font-size:20px; color:#1E3A5F; margin-bottom:8px; }
+.empty-state p { font-size:14px; color:#888; }
+h1.ch { font-size:20px; color:#0D1A2E; border-bottom:2px solid #1E3A5F; padding-bottom:6px; margin:24px 0 14px; font-weight:700; }
+h2 { font-size:15px; color:#0D1A2E; margin:18px 0 8px; font-weight:700; }
+table { width:100%; border-collapse:collapse; margin:8px 0; font-size:12px; }
+th { background:#1E3A5F; color:#fff; padding:8px 6px; text-align:center; border:1px solid #1E3A5F; font-weight:700; }
+td { padding:7px 5px; border:1px solid #AAA; text-align:center; color:#1a1a1a; }
+tr:nth-child(even) { background:#F2F2F2; }
+td.l { text-align:left; }
+.tier-row { font-weight:700; color:#fff; text-align:center; }
+.tier-chong { background:#6E2C2C; }
+.tier-wen { background:#1E3A5F; }
+.tier-bao { background:#2D4A3E; }
+.danger { background:#F8F6F0; border-left:3px solid #6E2C2C; padding:10px 14px; margin:10px 0; }
+.warn { background:#F8F6F0; border-left:3px solid #C87A4A; padding:10px 14px; margin:10px 0; }
+.cover { text-align:left; margin-bottom:20px; padding-bottom:20px; border-bottom:1px solid #1E3A5F; }
+.cover h1 { font-size:28px; color:#1E3A5F; margin-bottom:8px; }
+.cover .sub { font-size:13px; color:#888; }
+.summary-cards { display:flex; gap:12px; margin:16px 0; flex-wrap:wrap; }
+.card { flex:1; min-width:140px; padding:12px; border-radius:6px; text-align:center; }
+.card-blue { background:#EFF6FF; border:1px solid #1E3A5F; }
+.card-red { background:#FEF2F2; border:1px solid #6E2C2C; }
+.card-green { background:#E8F5E0; border:1px solid #2D4A3E; }
+.card .label { font-size:11px; color:#888; }
+.card .value { font-size:18px; font-weight:700; margin-top:4px; }
+.card-blue .value { color:#1E3A5F; }
+.card-red .value { color:#6E2C2C; }
+.card-green .value { color:#2D4A3E; }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+<h1>高考志愿报告查看器</h1>
+<button class="file-btn" onclick="document.getElementById('fileInput').click()">加载 analysis.json</button>
+<span class="file-name" id="fileName">未加载</span>
+<input type="file" id="fileInput" accept=".json" style="display:none">
+</div>
+
+<div class="report" id="report">
+<div class="empty-state">
+<h2>请加载 analysis.json 文件</h2>
+<p>点击上方按钮，选择分析引擎生成的 analysis.json 文件，报告将自动渲染。</p>
+</div>
+</div>
+
+<script>
+document.getElementById('fileInput').addEventListener('change', function(e) {
+  var file = e.target.files[0];
+  if (!file) return;
+  document.getElementById('fileName').textContent = file.name;
+  var reader = new FileReader();
+  reader.onload = function(ev) {
+    try {
+      var data = JSON.parse(ev.target.result);
+      renderReport(data);
+    } catch(err) {
+      document.getElementById('report').innerHTML = '<div class="empty-state"><h2>JSON解析失败</h2><p>'+err.message+'</p></div>';
+    }
+  };
+  reader.readAsText(file, 'utf-8');
+});
+
+function renderReport(a) {
+  var s = a.student_summary || {};
+  var strengths = a.strengths || {};
+  var directions = a.directions || [];
+  var volunteers = a.volunteers || [];
+  var risks = a.risk_assessment || {};
+  var scores = strengths.all_scores || {};
+  var html = '';
+
+  // Cover
+  var scoreStr = Object.keys(scores).map(function(k){return k+' '+scores[k];}).join(' · ');
+  html += '<div class="cover">';
+  html += '<h1>高考志愿专业评估分析报告</h1>';
+  html += '<div class="sub">'+(s.name||'考生')+'　|　位次'+(s.rank||'')+'　|　王牌:'+(s.king_card||'无')+'</div>';
+  if (scoreStr) html += '<div class="sub" style="font-size:11px;margin-top:4px;">学科成绩：'+scoreStr+'</div>';
+  html += '</div>';
+
+  // Summary cards
+  html += '<div class="summary-cards">';
+  html += '<div class="card card-blue"><div class="label">志愿总数</div><div class="value">'+(a.total_volunteers||volunteers.length)+'</div></div>';
+  html += '<div class="card card-red"><div class="label">滑档风险</div><div class="value">'+(risks.slide_risk||'未评估')+'</div></div>';
+  html += '<div class="card card-green"><div class="label">保底位次</div><div class="value">'+(risks.bottom_rank||'未知')+'</div></div>';
+  html += '</div>';
+
+  // Section 1: Strengths
+  html += '<h1 class="ch">一、学科优势分析</h1>';
+  html += '<table><tr><th style="width:20%;">项目</th><th>分析结果</th></tr>';
+  html += '<tr><td><b>王牌科目</b></td><td class="l">'+(strengths.king_card||'无显著王牌')+'</td></tr>';
+  html += '<tr><td><b>软肋科目</b></td><td class="l">'+(strengths.weakest||'无明显软肋')+'</td></tr>';
+  html += '<tr><td><b>推荐方向</b></td><td class="l">'+(s.best_directions||[]).join('、')+'</td></tr>';
+  html += '</table>';
+
+  // Section 2: Directions
+  if (directions.length > 0) {
+    html += '<h1 class="ch">二、推荐方向与匹配度</h1>';
+    html += '<table><tr><th>方向</th><th>匹配度</th><th>推荐理由</th></tr>';
+    directions.forEach(function(d) {
+      html += '<tr><td><b>'+(d.direction||'')+'</b></td><td>'+(d.match_score||0)+'%</td><td class="l">'+(d.reason||'')+'</td></tr>';
+    });
+    html += '</table>';
+  }
+
+  // Section 3: Volunteers
+  if (volunteers.length > 0) {
+    html += '<h1 class="ch">三、志愿填报参考列表</h1>';
+    html += '<table><tr><th style="width:5%;">序号</th><th style="width:22%;">院校</th><th style="width:24%;">专业</th><th style="width:8%;">冲稳保</th><th style="width:10%;">位次</th><th>备注</th></tr>';
+    var currentTier = null;
+    var tierNames = {'冲':'冲档','稳':'稳档','保':'保档'};
+    var tierClass = {'冲':'tier-chong','稳':'tier-wen','保':'tier-bao'};
+    volunteers.forEach(function(v) {
+      var tier = v.tier||'';
+      if (tier !== currentTier) {
+        currentTier = tier;
+        html += '<tr><td colspan="6" class="tier-row '+tierClass[tier]+'">━━ '+(tierNames[tier]||tier)+' ━━</td></tr>';
+      }
+      html += '<tr><td>'+(v.order||'')+'</td><td><b>'+(v.name||'')+'</b></td><td class="l">'+(v.major||'')+'</td><td>'+tier+'</td><td>'+(v.rank_2025||'')+'</td><td class="l">'+(v.note||'')+'</td></tr>';
+    });
+    html += '</table>';
+  }
+
+  // Section 4: Risk
+  html += '<h1 class="ch">四、风险评估与防范</h1>';
+  html += '<div class="danger"><b>滑档风险：'+(risks.slide_risk||'未评估')+'</b>　保底位次：'+(risks.bottom_rank||'未知')+'</div>';
+  html += '<div class="warn"><b>退档风险：'+(risks.reject_risk||'未评估')+'</b>';
+  if (risks.reject_reasons && risks.reject_reasons.length > 0) {
+    html += '<br>' + risks.reject_reasons.map(function(r){return '⚠ '+r;}).join('<br>');
+  }
+  html += '</div>';
+
+  if (risks.checklist && risks.checklist.length > 0) {
+    html += '<h2>填报前紧急确认清单</h2>';
+    html += '<table>';
+    risks.checklist.forEach(function(item, i) {
+      html += '<tr><td style="width:10%;">'+(i+1)+'</td><td class="l">'+item+'</td></tr>';
+    });
+    html += '</table>';
+  }
+
+  document.getElementById('report').innerHTML = html;
+}
+</script>
+</body>
+</html>
