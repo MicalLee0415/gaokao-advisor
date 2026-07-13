@@ -9,6 +9,7 @@
 
 import json
 import os
+import sys
 from datetime import datetime
 from openpyxl import Workbook
 from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
@@ -349,7 +350,6 @@ def generate_excel(analysis_path: str, output_xlsx: str):
 
 
 if __name__ == "__main__":
-    import sys
     if len(sys.argv) >= 3:
         generate_excel(sys.argv[1], sys.argv[2])
     else:
