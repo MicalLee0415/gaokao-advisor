@@ -1,0 +1,263 @@
+[
+  {
+    "name": "华南理工大学",
+    "major": "化学工程与工艺",
+    "rank_2025": 18000,
+    "tuition": 6000,
+    "direction": "化工",
+    "color_limit": false,
+    "note": "985·广州"
+  },
+  {
+    "name": "中山大学",
+    "major": "化学工程与工艺",
+    "rank_2025": 12000,
+    "tuition": 6000,
+    "direction": "化工",
+    "color_limit": false,
+    "note": "985"
+  },
+  {
+    "name": "广东工业大学",
+    "major": "化学工程与工艺",
+    "rank_2025": 70000,
+    "tuition": 5500,
+    "direction": "化工",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "汕头大学",
+    "major": "化学工程与工艺",
+    "rank_2025": 65000,
+    "tuition": 5500,
+    "direction": "化工",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "深圳大学",
+    "major": "化学工程与工艺",
+    "rank_2025": 45000,
+    "tuition": 6000,
+    "direction": "化工",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "广州大学",
+    "major": "化学工程与工艺",
+    "rank_2025": 75000,
+    "tuition": 5500,
+    "direction": "化工",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "华南理工大学",
+    "major": "材料类",
+    "rank_2025": 16000,
+    "tuition": 6000,
+    "direction": "材料",
+    "color_limit": false,
+    "note": "985·国家重点"
+  },
+  {
+    "name": "中山大学",
+    "major": "材料类",
+    "rank_2025": 13000,
+    "tuition": 6000,
+    "direction": "材料",
+    "color_limit": false,
+    "note": "985"
+  },
+  {
+    "name": "广东工业大学",
+    "major": "材料类",
+    "rank_2025": 68000,
+    "tuition": 5500,
+    "direction": "材料",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "深圳大学",
+    "major": "材料类",
+    "rank_2025": 44000,
+    "tuition": 6000,
+    "direction": "材料",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "汕头大学",
+    "major": "材料类",
+    "rank_2025": 66000,
+    "tuition": 5500,
+    "direction": "材料",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "中山大学",
+    "major": "药学",
+    "rank_2025": 13000,
+    "tuition": 6000,
+    "direction": "药学",
+    "color_limit": false,
+    "note": "985"
+  },
+  {
+    "name": "广东药科大学",
+    "major": "药学",
+    "rank_2025": 72000,
+    "tuition": 5800,
+    "direction": "药学",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "南方医科大学",
+    "major": "药学",
+    "rank_2025": 40000,
+    "tuition": 5800,
+    "direction": "药学",
+    "color_limit": false,
+    "note": "广州"
+  },
+  {
+    "name": "广州医科大学",
+    "major": "药学",
+    "rank_2025": 55000,
+    "tuition": 5800,
+    "direction": "药学",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "华南理工大学",
+    "major": "食品科学与工程",
+    "rank_2025": 18000,
+    "tuition": 6000,
+    "direction": "食品",
+    "color_limit": false,
+    "note": "985"
+  },
+  {
+    "name": "华南农业大学",
+    "major": "食品科学与工程",
+    "rank_2025": 65000,
+    "tuition": 5500,
+    "direction": "食品",
+    "color_limit": false,
+    "note": "广州"
+  },
+  {
+    "name": "广东海洋大学",
+    "major": "食品科学与工程",
+    "rank_2025": 80000,
+    "tuition": 5000,
+    "direction": "食品",
+    "color_limit": false,
+    "note": "湛江"
+  },
+  {
+    "name": "仲恺农业工程学院",
+    "major": "食品科学与工程",
+    "rank_2025": 90000,
+    "tuition": 5000,
+    "direction": "食品",
+    "color_limit": false,
+    "note": "广州"
+  },
+  {
+    "name": "中山大学",
+    "major": "计算机科学与技术",
+    "rank_2025": 10000,
+    "tuition": 6000,
+    "direction": "CS",
+    "color_limit": false,
+    "note": "985"
+  },
+  {
+    "name": "华南理工大学",
+    "major": "计算机科学与技术",
+    "rank_2025": 15000,
+    "tuition": 6000,
+    "direction": "CS",
+    "color_limit": false,
+    "note": "985"
+  },
+  {
+    "name": "深圳大学",
+    "major": "计算机科学与技术",
+    "rank_2025": 35000,
+    "tuition": 6000,
+    "direction": "CS",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "广东工业大学",
+    "major": "计算机科学与技术",
+    "rank_2025": 62000,
+    "tuition": 5500,
+    "direction": "CS",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "广州大学",
+    "major": "计算机科学与技术",
+    "rank_2025": 70000,
+    "tuition": 5500,
+    "direction": "CS",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "汕头大学",
+    "major": "计算机科学与技术",
+    "rank_2025": 60000,
+    "tuition": 5500,
+    "direction": "CS",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "北京化工大学",
+    "major": "化学工程与工艺",
+    "rank_2025": 35000,
+    "tuition": 5500,
+    "direction": "211",
+    "color_limit": false,
+    "note": "211·北京"
+  },
+  {
+    "name": "华东理工大学",
+    "major": "化学工程与工艺",
+    "rank_2025": 25000,
+    "tuition": 5500,
+    "direction": "211",
+    "color_limit": false,
+    "note": "211·上海"
+  },
+  {
+    "name": "南京理工大学",
+    "major": "材料类",
+    "rank_2025": 28000,
+    "tuition": 5800,
+    "direction": "211",
+    "color_limit": false,
+    "note": "211·江苏"
+  },
+  {
+    "name": "江南大学",
+    "major": "食品科学与工程",
+    "rank_2025": 32000,
+    "tuition": 5500,
+    "direction": "211",
+    "color_limit": false,
+    "note": "211·江苏"
+  }
+]

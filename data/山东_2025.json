@@ -1,0 +1,299 @@
+[
+  {
+    "name": "青岛科技大学",
+    "major": "化学工程与工艺",
+    "rank_2025": 70000,
+    "tuition": 5300,
+    "direction": "化工",
+    "color_limit": false,
+    "note": "橡胶特色"
+  },
+  {
+    "name": "山东大学",
+    "major": "化学工程与工艺",
+    "rank_2025": 15000,
+    "tuition": 6000,
+    "direction": "化工",
+    "color_limit": false,
+    "note": "985"
+  },
+  {
+    "name": "中国石油大学(华东)",
+    "major": "化学工程与工艺",
+    "rank_2025": 22000,
+    "tuition": 5800,
+    "direction": "化工",
+    "color_limit": false,
+    "note": "211·石油特色"
+  },
+  {
+    "name": "齐鲁工业大学",
+    "major": "化学工程与工艺",
+    "rank_2025": 80000,
+    "tuition": 5500,
+    "direction": "化工",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "山东理工大学",
+    "major": "化学工程与工艺",
+    "rank_2025": 85000,
+    "tuition": 5000,
+    "direction": "化工",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "烟台大学",
+    "major": "化学工程与工艺",
+    "rank_2025": 95000,
+    "tuition": 5000,
+    "direction": "化工",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "济南大学",
+    "major": "化学工程与工艺",
+    "rank_2025": 78000,
+    "tuition": 5500,
+    "direction": "化工",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "山东大学",
+    "major": "材料科学与工程",
+    "rank_2025": 14000,
+    "tuition": 6000,
+    "direction": "材料",
+    "color_limit": false,
+    "note": "985·国家重点"
+  },
+  {
+    "name": "青岛科技大学",
+    "major": "材料类",
+    "rank_2025": 68000,
+    "tuition": 5300,
+    "direction": "材料",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "山东科技大学",
+    "major": "材料类",
+    "rank_2025": 75000,
+    "tuition": 5000,
+    "direction": "材料",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "济南大学",
+    "major": "材料类",
+    "rank_2025": 80000,
+    "tuition": 5500,
+    "direction": "材料",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "青岛大学",
+    "major": "材料类",
+    "rank_2025": 72000,
+    "tuition": 5300,
+    "direction": "材料",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "山东大学",
+    "major": "药学",
+    "rank_2025": 16000,
+    "tuition": 6000,
+    "direction": "药学",
+    "color_limit": false,
+    "note": "985"
+  },
+  {
+    "name": "山东第一医科大学",
+    "major": "药学",
+    "rank_2025": 70000,
+    "tuition": 5400,
+    "direction": "药学",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "齐鲁医药学院",
+    "major": "药学",
+    "rank_2025": 95000,
+    "tuition": 12000,
+    "direction": "药学",
+    "color_limit": false,
+    "note": "民办"
+  },
+  {
+    "name": "烟台大学",
+    "major": "药学",
+    "rank_2025": 88000,
+    "tuition": 5000,
+    "direction": "药学",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "潍坊医学院",
+    "major": "药学",
+    "rank_2025": 90000,
+    "tuition": 5400,
+    "direction": "药学",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "中国海洋大学",
+    "major": "食品科学与工程",
+    "rank_2025": 18000,
+    "tuition": 5800,
+    "direction": "食品",
+    "color_limit": false,
+    "note": "985·青岛"
+  },
+  {
+    "name": "山东农业大学",
+    "major": "食品科学与工程",
+    "rank_2025": 82000,
+    "tuition": 5000,
+    "direction": "食品",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "青岛农业大学",
+    "major": "食品科学与工程",
+    "rank_2025": 88000,
+    "tuition": 5000,
+    "direction": "食品",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "齐鲁工业大学",
+    "major": "食品科学与工程",
+    "rank_2025": 85000,
+    "tuition": 5500,
+    "direction": "食品",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "烟台大学",
+    "major": "食品科学与工程",
+    "rank_2025": 92000,
+    "tuition": 5000,
+    "direction": "食品",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "山东大学",
+    "major": "计算机科学与技术",
+    "rank_2025": 13000,
+    "tuition": 6000,
+    "direction": "CS",
+    "color_limit": false,
+    "note": "985"
+  },
+  {
+    "name": "中国海洋大学",
+    "major": "计算机科学与技术",
+    "rank_2025": 22000,
+    "tuition": 5800,
+    "direction": "CS",
+    "color_limit": false,
+    "note": "985"
+  },
+  {
+    "name": "山东科技大学",
+    "major": "计算机科学与技术",
+    "rank_2025": 68000,
+    "tuition": 5000,
+    "direction": "CS",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "青岛大学",
+    "major": "计算机科学与技术",
+    "rank_2025": 65000,
+    "tuition": 5300,
+    "direction": "CS",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "济南大学",
+    "major": "计算机科学与技术",
+    "rank_2025": 75000,
+    "tuition": 5500,
+    "direction": "CS",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "山东理工大学",
+    "major": "软件工程",
+    "rank_2025": 82000,
+    "tuition": 5000,
+    "direction": "CS",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "北京化工大学",
+    "major": "化学工程与工艺",
+    "rank_2025": 30000,
+    "tuition": 5500,
+    "direction": "211",
+    "color_limit": false,
+    "note": "211·北京"
+  },
+  {
+    "name": "大连理工大学",
+    "major": "化学工程与工艺",
+    "rank_2025": 14000,
+    "tuition": 5200,
+    "direction": "211",
+    "color_limit": false,
+    "note": "985·辽宁"
+  },
+  {
+    "name": "华东理工大学",
+    "major": "化学工程与工艺",
+    "rank_2025": 20000,
+    "tuition": 5500,
+    "direction": "211",
+    "color_limit": false,
+    "note": "211·上海"
+  },
+  {
+    "name": "南京理工大学",
+    "major": "材料类",
+    "rank_2025": 24000,
+    "tuition": 5800,
+    "direction": "211",
+    "color_limit": false,
+    "note": "211·江苏"
+  },
+  {
+    "name": "江南大学",
+    "major": "食品科学与工程",
+    "rank_2025": 28000,
+    "tuition": 5500,
+    "direction": "211",
+    "color_limit": false,
+    "note": "211·江苏"
+  }
+]

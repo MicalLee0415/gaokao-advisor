@@ -239,10 +239,28 @@ def assess_risks(volunteers: list, student: dict) -> dict:
 # ============================================================
 # 主分析函数
 # ============================================================
-def analyze(student: dict, schools_data: list, policy: dict = None) -> dict:
-    """完整6步分析，输出analysis.json结构"""
+def analyze(student: dict, schools_data: list = None, policy: dict = None) -> dict:
+    """完整6步分析，输出analysis.json结构
+
+    Args:
+        student: 学生档案（survey.py输出格式）
+        schools_data: 院校数据列表。如果为None，自动从内置数据包加载。
+        policy: 各省政策参数。如果为None，默认96志愿。
+    """
     if policy is None:
         policy = {"max_volunteers": 96}
+
+    # 自动加载内置数据包
+    if schools_data is None:
+        try:
+            from data_scraper import load_data_package
+            province = student.get("basic", {}).get("province", "河北")
+            schools_data = load_data_package(province, 2025)
+            if not schools_data:
+                schools_data = []
+                print("WARN: 无可用院校数据，请提供schools_data或安装数据包")
+        except ImportError:
+            schools_data = []
 
     scores = student.get("academic", {}).get("scores", {})
     rank = student.get("basic", {}).get("rank", 0)

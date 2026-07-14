@@ -19,9 +19,10 @@
    - 输出：student.json
 
 2. **数据获取**：加载目标省份的投档数据
-   - P0：使用内置数据包（CSV/JSON）
-   - P1+：实时爬取阳光高考/各省考试院
-   - 输出：data_{省份}_{年份}.json
+   - 内置数据包：`data/{省份}_2025.json`（目前含河北/山东/广东/河南4省）
+   - CSV导入：用户从考试院下载CSV，用`scripts/data_scraper.py parse`导入
+   - 自动加载：analyzer.py检测学生省份，自动加载对应数据包
+   - 输出：schools_data列表（analyzer兼容格式）
 
 3. **分析引擎**：基于6步框架分析
    - 学科优势分析 → 方向筛选 → 院校匹配 → 就业评估 → 96志愿排序 → 风险评估
@@ -51,6 +52,7 @@
 | `scripts/analyzer.py` | 核心分析引擎（6步框架） |
 | `scripts/pdf_generator.py` | PDF报告生成（Playwright） |
 | `scripts/excel_generator.py` | Excel志愿表生成（openpyxl，3个Sheet） |
+| `scripts/data_scraper.py` | 数据爬虫与加载器（CSV解析+内置数据包） |
 | `references/methodology.md` | 分析方法论（6步框架详解） |
 | `references/major-database.md` | 专业方向库（就业/课程/门槛/企业） |
 | `references/report-style.md` | 报告视觉规范 |

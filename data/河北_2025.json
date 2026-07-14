@@ -1,0 +1,515 @@
+[
+  {
+    "name": "河北科技大学",
+    "major": "化学工程与工艺",
+    "rank_2025": 79754,
+    "tuition": 5390,
+    "direction": "化工",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "河北工业大学",
+    "major": "化学工程与工艺",
+    "rank_2025": 42000,
+    "tuition": 5800,
+    "direction": "化工",
+    "color_limit": false,
+    "note": "211双一流"
+  },
+  {
+    "name": "燕山大学",
+    "major": "化学工程与工艺",
+    "rank_2025": 38000,
+    "tuition": 5390,
+    "direction": "化工",
+    "color_limit": false,
+    "note": "河北省重点"
+  },
+  {
+    "name": "河北大学",
+    "major": "化学工程与工艺",
+    "rank_2025": 55000,
+    "tuition": 5000,
+    "direction": "化工",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "华北理工大学",
+    "major": "化学工程与工艺",
+    "rank_2025": 72000,
+    "tuition": 4900,
+    "direction": "化工",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "河北农业大学",
+    "major": "化学工程与工艺",
+    "rank_2025": 88000,
+    "tuition": 5000,
+    "direction": "化工",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "石家庄铁道大学",
+    "major": "化学工程与工艺",
+    "rank_2025": 68000,
+    "tuition": 5000,
+    "direction": "化工",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "中北大学",
+    "major": "化学工程与工艺",
+    "rank_2025": 58000,
+    "tuition": 5500,
+    "direction": "化工",
+    "color_limit": false,
+    "note": "山西"
+  },
+  {
+    "name": "辽宁科技大学",
+    "major": "化学工程与工艺",
+    "rank_2025": 95000,
+    "tuition": 4900,
+    "direction": "化工",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "长春理工大学",
+    "major": "化学工程与工艺",
+    "rank_2025": 78000,
+    "tuition": 5000,
+    "direction": "化工",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "河南科技大学",
+    "major": "化学工程与工艺",
+    "rank_2025": 92000,
+    "tuition": 5000,
+    "direction": "化工",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "山东理工大学",
+    "major": "化学工程与工艺",
+    "rank_2025": 85000,
+    "tuition": 5000,
+    "direction": "化工",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "河北工业大学",
+    "major": "材料类",
+    "rank_2025": 40000,
+    "tuition": 5800,
+    "direction": "材料",
+    "color_limit": false,
+    "note": "211双一流"
+  },
+  {
+    "name": "燕山大学",
+    "major": "材料成型及控制工程",
+    "rank_2025": 35000,
+    "tuition": 5390,
+    "direction": "材料",
+    "color_limit": false,
+    "note": "国家重点学科"
+  },
+  {
+    "name": "华北理工大学",
+    "major": "材料类",
+    "rank_2025": 68000,
+    "tuition": 4900,
+    "direction": "材料",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "河北科技大学",
+    "major": "材料物理",
+    "rank_2025": 82000,
+    "tuition": 5390,
+    "direction": "材料",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "河北大学",
+    "major": "材料化学",
+    "rank_2025": 58000,
+    "tuition": 5000,
+    "direction": "材料",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "中北大学",
+    "major": "材料类",
+    "rank_2025": 55000,
+    "tuition": 5500,
+    "direction": "材料",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "辽宁工程技术大学",
+    "major": "材料类",
+    "rank_2025": 90000,
+    "tuition": 4800,
+    "direction": "材料",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "长春理工大学",
+    "major": "材料化学",
+    "rank_2025": 75000,
+    "tuition": 5000,
+    "direction": "材料",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "河南理工大学",
+    "major": "材料类",
+    "rank_2025": 88000,
+    "tuition": 5000,
+    "direction": "材料",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "山东科技大学",
+    "major": "材料类",
+    "rank_2025": 80000,
+    "tuition": 5000,
+    "direction": "材料",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "河北医科大学",
+    "major": "药学",
+    "rank_2025": 50000,
+    "tuition": 5800,
+    "direction": "药学",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "河北大学",
+    "major": "药学",
+    "rank_2025": 60000,
+    "tuition": 5000,
+    "direction": "药学",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "华北理工大学",
+    "major": "药学",
+    "rank_2025": 75000,
+    "tuition": 4900,
+    "direction": "药学",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "沈阳药科大学",
+    "major": "药学",
+    "rank_2025": 52000,
+    "tuition": 5500,
+    "direction": "药学",
+    "color_limit": false,
+    "note": "辽宁"
+  },
+  {
+    "name": "中国药科大学",
+    "major": "药学",
+    "rank_2025": 15000,
+    "tuition": 6800,
+    "direction": "药学",
+    "color_limit": false,
+    "note": "211·江苏"
+  },
+  {
+    "name": "河南大学",
+    "major": "药学",
+    "rank_2025": 70000,
+    "tuition": 5000,
+    "direction": "药学",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "齐鲁医药学院",
+    "major": "药学",
+    "rank_2025": 98000,
+    "tuition": 12000,
+    "direction": "药学",
+    "color_limit": false,
+    "note": "山东·民办"
+  },
+  {
+    "name": "山东第一医科大学",
+    "major": "药学",
+    "rank_2025": 78000,
+    "tuition": 5400,
+    "direction": "药学",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "河北农业大学",
+    "major": "食品科学与工程",
+    "rank_2025": 85000,
+    "tuition": 5000,
+    "direction": "食品",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "天津科技大学",
+    "major": "食品科学与工程",
+    "rank_2025": 65000,
+    "tuition": 5400,
+    "direction": "食品",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "河北大学",
+    "major": "食品科学与工程",
+    "rank_2025": 70000,
+    "tuition": 5000,
+    "direction": "食品",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "中国农业大学",
+    "major": "食品科学与工程",
+    "rank_2025": 12000,
+    "tuition": 5000,
+    "direction": "食品",
+    "color_limit": false,
+    "note": "985·北京"
+  },
+  {
+    "name": "河南工业大学",
+    "major": "食品科学与工程",
+    "rank_2025": 72000,
+    "tuition": 5000,
+    "direction": "食品",
+    "color_limit": false,
+    "note": "粮食特色"
+  },
+  {
+    "name": "吉林农业大学",
+    "major": "食品科学与工程",
+    "rank_2025": 95000,
+    "tuition": 4500,
+    "direction": "食品",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "哈尔滨商业大学",
+    "major": "食品科学与工程",
+    "rank_2025": 98000,
+    "tuition": 4500,
+    "direction": "食品",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "山东农业大学",
+    "major": "食品科学与工程",
+    "rank_2025": 88000,
+    "tuition": 5000,
+    "direction": "食品",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "渤海大学",
+    "major": "食品科学与工程",
+    "rank_2025": 90000,
+    "tuition": 4800,
+    "direction": "食品",
+    "color_limit": false,
+    "note": "辽宁"
+  },
+  {
+    "name": "河北大学",
+    "major": "计算机科学与技术",
+    "rank_2025": 48000,
+    "tuition": 5390,
+    "direction": "CS",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "燕山大学",
+    "major": "计算机科学与技术",
+    "rank_2025": 38000,
+    "tuition": 5390,
+    "direction": "CS",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "石家庄铁道大学",
+    "major": "计算机科学与技术",
+    "rank_2025": 60000,
+    "tuition": 5000,
+    "direction": "CS",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "河北工业大学",
+    "major": "计算机科学与技术",
+    "rank_2025": 38000,
+    "tuition": 5800,
+    "direction": "CS",
+    "color_limit": false,
+    "note": "211"
+  },
+  {
+    "name": "中北大学",
+    "major": "计算机科学与技术",
+    "rank_2025": 52000,
+    "tuition": 5500,
+    "direction": "CS",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "长春理工大学",
+    "major": "计算机科学与技术",
+    "rank_2025": 70000,
+    "tuition": 5000,
+    "direction": "CS",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "辽宁大学",
+    "major": "计算机科学与技术",
+    "rank_2025": 65000,
+    "tuition": 5200,
+    "direction": "CS",
+    "color_limit": false,
+    "note": "211"
+  },
+  {
+    "name": "河南大学",
+    "major": "软件工程",
+    "rank_2025": 68000,
+    "tuition": 12000,
+    "direction": "CS",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "山东科技大学",
+    "major": "计算机科学与技术",
+    "rank_2025": 72000,
+    "tuition": 5000,
+    "direction": "CS",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "青岛大学",
+    "major": "计算机科学与技术",
+    "rank_2025": 68000,
+    "tuition": 5300,
+    "direction": "CS",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "北京化工大学",
+    "major": "化学工程与工艺",
+    "rank_2025": 28000,
+    "tuition": 5500,
+    "direction": "211",
+    "color_limit": false,
+    "note": "211·北京"
+  },
+  {
+    "name": "大连理工大学",
+    "major": "化学工程与工艺",
+    "rank_2025": 12000,
+    "tuition": 5200,
+    "direction": "211",
+    "color_limit": false,
+    "note": "985·辽宁"
+  },
+  {
+    "name": "华东理工大学",
+    "major": "化学工程与工艺",
+    "rank_2025": 18000,
+    "tuition": 5500,
+    "direction": "211",
+    "color_limit": false,
+    "note": "211·上海"
+  },
+  {
+    "name": "南京理工大学",
+    "major": "材料类",
+    "rank_2025": 20000,
+    "tuition": 5800,
+    "direction": "211",
+    "color_limit": false,
+    "note": "211·江苏"
+  },
+  {
+    "name": "武汉理工大学",
+    "major": "材料类",
+    "rank_2025": 22000,
+    "tuition": 5500,
+    "direction": "211",
+    "color_limit": false,
+    "note": "211·湖北"
+  },
+  {
+    "name": "江南大学",
+    "major": "食品科学与工程",
+    "rank_2025": 25000,
+    "tuition": 5500,
+    "direction": "211",
+    "color_limit": false,
+    "note": "211·江苏"
+  },
+  {
+    "name": "南昌大学",
+    "major": "食品科学与工程",
+    "rank_2025": 35000,
+    "tuition": 5300,
+    "direction": "211",
+    "color_limit": false,
+    "note": "211·江西"
+  },
+  {
+    "name": "西北农林科技大学",
+    "major": "食品科学与工程",
+    "rank_2025": 30000,
+    "tuition": 4500,
+    "direction": "211",
+    "color_limit": false,
+    "note": "985·陕西"
+  }
+]

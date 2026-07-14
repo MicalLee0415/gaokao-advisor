@@ -53,9 +53,15 @@ gaokao-advisor/
 ├── SKILL.md                        # 入口：触发条件 + 工作流路由
 ├── scripts/
 │   ├── survey.py                   # 30+问题调研 → student.json
-│   ├── analyzer.py                 # 6步分析引擎 → analysis.json
+│   ├── analyzer.py                 # 6步分析引擎 → analysis.json（支持内置数据包自动加载）
 │   ├── pdf_generator.py            # PDF报告生成（Playwright）
-│   └── excel_generator.py          # Excel志愿表生成（openpyxl，3个Sheet）
+│   ├── excel_generator.py          # Excel志愿表生成（openpyxl，3个Sheet）
+│   └── data_scraper.py             # 数据爬虫与加载器（CSV解析+内置数据包）
+├── data/                           # 内置院校数据包（P1）
+│   ├── 河北_2025.json              # 57条记录
+│   ├── 山东_2025.json              # 33条记录
+│   ├── 广东_2025.json              # 29条记录
+│   └── 河南_2025.json              # 29条记录
 ├── references/
 │   ├── methodology.md              # 分析方法论（6步框架）
 │   ├── major-database.md           # 专业方向库（就业/课程/门槛/企业）
@@ -114,7 +120,7 @@ playwright install chromium
 | 阶段 | 内容 | 状态 |
 |---|---|---|
 | P0 | 核心Skill（调研+分析+PDF） | ✅ 完成 |
-| P1 | 数据爬虫（4省）+ 内置数据包 | 📋 计划中 |
+| P1 | 数据爬虫（4省）+ 内置数据包 | ✅ 完成 |
 | P2 | 网页表单 + Excel输出 + 交互式网页 | ✅ 完成 |
 | P3 | 全国31省 + 政策模板扩展 | ✅ 完成 |
 

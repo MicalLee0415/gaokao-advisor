@@ -1,0 +1,263 @@
+[
+  {
+    "name": "郑州大学",
+    "major": "化学工程与工艺",
+    "rank_2025": 35000,
+    "tuition": 5800,
+    "direction": "化工",
+    "color_limit": false,
+    "note": "211·双一流"
+  },
+  {
+    "name": "河南大学",
+    "major": "化学工程与工艺",
+    "rank_2025": 55000,
+    "tuition": 5000,
+    "direction": "化工",
+    "color_limit": false,
+    "note": "双一流"
+  },
+  {
+    "name": "河南科技大学",
+    "major": "化学工程与工艺",
+    "rank_2025": 75000,
+    "tuition": 5000,
+    "direction": "化工",
+    "color_limit": false,
+    "note": "洛阳"
+  },
+  {
+    "name": "河南理工大学",
+    "major": "化学工程与工艺",
+    "rank_2025": 80000,
+    "tuition": 5000,
+    "direction": "化工",
+    "color_limit": false,
+    "note": "焦作"
+  },
+  {
+    "name": "郑州轻工业大学",
+    "major": "化学工程与工艺",
+    "rank_2025": 88000,
+    "tuition": 5000,
+    "direction": "化工",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "中原工学院",
+    "major": "化学工程与工艺",
+    "rank_2025": 95000,
+    "tuition": 5000,
+    "direction": "化工",
+    "color_limit": false,
+    "note": "郑州"
+  },
+  {
+    "name": "郑州大学",
+    "major": "材料类",
+    "rank_2025": 33000,
+    "tuition": 5800,
+    "direction": "材料",
+    "color_limit": false,
+    "note": "211·双一流"
+  },
+  {
+    "name": "河南大学",
+    "major": "材料类",
+    "rank_2025": 56000,
+    "tuition": 5000,
+    "direction": "材料",
+    "color_limit": false,
+    "note": "双一流"
+  },
+  {
+    "name": "河南科技大学",
+    "major": "材料类",
+    "rank_2025": 76000,
+    "tuition": 5000,
+    "direction": "材料",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "河南理工大学",
+    "major": "材料类",
+    "rank_2025": 82000,
+    "tuition": 5000,
+    "direction": "材料",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "郑州轻工业大学",
+    "major": "材料类",
+    "rank_2025": 90000,
+    "tuition": 5000,
+    "direction": "材料",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "郑州大学",
+    "major": "药学",
+    "rank_2025": 34000,
+    "tuition": 5800,
+    "direction": "药学",
+    "color_limit": false,
+    "note": "211"
+  },
+  {
+    "name": "河南大学",
+    "major": "药学",
+    "rank_2025": 57000,
+    "tuition": 5000,
+    "direction": "药学",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "河南中医药大学",
+    "major": "药学",
+    "rank_2025": 85000,
+    "tuition": 5000,
+    "direction": "药学",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "新乡医学院",
+    "major": "药学",
+    "rank_2025": 80000,
+    "tuition": 5000,
+    "direction": "药学",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "河南工业大学",
+    "major": "食品科学与工程",
+    "rank_2025": 70000,
+    "tuition": 5000,
+    "direction": "食品",
+    "color_limit": false,
+    "note": "粮食工程特色"
+  },
+  {
+    "name": "河南农业大学",
+    "major": "食品科学与工程",
+    "rank_2025": 78000,
+    "tuition": 5000,
+    "direction": "食品",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "郑州轻工业大学",
+    "major": "食品科学与工程",
+    "rank_2025": 90000,
+    "tuition": 5000,
+    "direction": "食品",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "河南科技大学",
+    "major": "食品科学与工程",
+    "rank_2025": 80000,
+    "tuition": 5000,
+    "direction": "食品",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "郑州大学",
+    "major": "计算机科学与技术",
+    "rank_2025": 30000,
+    "tuition": 5800,
+    "direction": "CS",
+    "color_limit": false,
+    "note": "211"
+  },
+  {
+    "name": "河南大学",
+    "major": "计算机科学与技术",
+    "rank_2025": 50000,
+    "tuition": 5000,
+    "direction": "CS",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "河南科技大学",
+    "major": "计算机科学与技术",
+    "rank_2025": 72000,
+    "tuition": 5000,
+    "direction": "CS",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "河南理工大学",
+    "major": "计算机科学与技术",
+    "rank_2025": 78000,
+    "tuition": 5000,
+    "direction": "CS",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "郑州轻工业大学",
+    "major": "软件工程",
+    "rank_2025": 88000,
+    "tuition": 12000,
+    "direction": "CS",
+    "color_limit": false,
+    "note": ""
+  },
+  {
+    "name": "北京化工大学",
+    "major": "化学工程与工艺",
+    "rank_2025": 32000,
+    "tuition": 5500,
+    "direction": "211",
+    "color_limit": false,
+    "note": "211·北京"
+  },
+  {
+    "name": "大连理工大学",
+    "major": "化学工程与工艺",
+    "rank_2025": 16000,
+    "tuition": 5200,
+    "direction": "211",
+    "color_limit": false,
+    "note": "985·辽宁"
+  },
+  {
+    "name": "华东理工大学",
+    "major": "化学工程与工艺",
+    "rank_2025": 22000,
+    "tuition": 5500,
+    "direction": "211",
+    "color_limit": false,
+    "note": "211·上海"
+  },
+  {
+    "name": "武汉理工大学",
+    "major": "材料类",
+    "rank_2025": 25000,
+    "tuition": 5500,
+    "direction": "211",
+    "color_limit": false,
+    "note": "211·湖北"
+  },
+  {
+    "name": "江南大学",
+    "major": "食品科学与工程",
+    "rank_2025": 30000,
+    "tuition": 5500,
+    "direction": "211",
+    "color_limit": false,
+    "note": "211·江苏"
+  }
+]
